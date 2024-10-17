@@ -13,7 +13,7 @@ function Weather()
         useEffect(() => {
             if(city !== ""){
                 axios
-                .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cda971d373577c5bb9fe990962b681d6&units=metric`)
+                .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API_KEY}&units=metric`)
                 .then((response) => {
                     console.log(response.data)
                     setData(response.data)
